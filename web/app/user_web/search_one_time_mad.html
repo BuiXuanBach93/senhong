@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html class="js">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="/share/userweb/jquery.min.js.download"></script>
+        <script src="/share/userweb/lodash.min.js.download"></script>
+        <script src="/share/userweb/mustache.min.js.download"></script>
+        <script src="/share/userweb/moment.min.js.download"></script>
+        <script src="/share/userweb/2411100364.js.download"></script>
+        <script type='text/javascript' src='/share/js/plugins/noty/jquery.noty.js'></script>
+        <script type='text/javascript' src='/share/js/plugins/noty/layouts/center.js'></script>
+        <script type='text/javascript' src='/share/js/plugins/bootstrap/bootstrap-datepicker.js'></script>
+        <script type="text/javascript" src="/share/js/plugins/dropzone/dropzone.min.js"></script>
+        <script type="text/javascript" src="/share/js/app/user.js"></script>
+
+        <meta name="csrf-param" content="authenticity_token">
+        <meta name="csrf-token" content="LSXwe4HWa1+ukou5sK1bJrOJqjoE5M6hb7u2cED/H/092tCwdV09zq+YqldFsh6o7mdAQbRYWmqL5HNRC9tu+w==">
+
+        <!-- Basic Meta Tags -->
+        <title>Đặt lịch giúp việc online | WOA</title>
+
+        <meta name="description" content="Book a home cleaner in Sydney or Melbourne for just $32 per hour with Helpling.com.au. Finding domestic and house cleaners made easy!">
+        <meta property="og:title" content="Book cleaning services online | Find a local cleaner | Helpling">
+        <meta property="og:description" content="Book a home cleaner in Sydney or Melbourne for just $32 per hour with Helpling.com.au. Finding domestic and house cleaners made easy!">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://www.helpling.com.au/">
+        <meta property="og:locale" content="en_AU">
+        <meta property="og:site_name" content="Helpling.com.au">
+        <meta property="og:image" content="https://production-de-h2.s3.amazonaws.com/assets/1001/1200x630_HelplingDE_Facebook.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="fb:admins" content="37300938">
+
+        <!-- Viewport and technical meta tags -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="google-site-verification" content="Fi5rdCnYv2dqA1MPGEd-NUcXwTMYAy365qC4HIItJUc">
+        <meta name="google-site-verification" content="7VqPsX4Q65WxbimiOf_yWWbUD95FBR9ou3rP656yDHE">
+        <!-- France Webmaster Verification code -->
+        <meta name="google-site-verification" content="TwK7bdvvgdAt0iFlvwE1BWeMmLqAE1hzxhnzp5Iut8A">
+
+        <!-- location data -->
+        <meta name="geo.placename" content="Sydney, New South Wales, Australia">
+        <meta name="geo.position" content="51.524247;-0.077017">
+        <meta name="geo.region" content="">
+        <meta name="ICBM" content="51.524247, -0.077017">
+        <link rel="stylesheet" href="/share/userweb/bootstrap.min.css">
+        <script src="/share/userweb/bootstrap.min.js.download"></script>
+        <link rel="stylesheet" type="text/css" href="/share/userweb/jquery.datetimepicker.min.css">
+        <script src="/share/userweb/jquery.datetimepicker.full.js.download"></script>
+
+
+        <link rel="icon" href="http://dev.giupviecsenhong.net/img/logo-sh.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="http://dev.giupviecsenhong.net/mg/logo-sh.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://dev.giupviecsenhong.net/assets/apple-touch-icon-58d553d8ee821844c5afb32b84430968a29ecbdab14b0e3a21ac2806333ca16f.png">
+        <link rel="alternate" hreflang="de" href="https://www.helpling.de/">
+        <link rel="alternate" hreflang="fr" href="https://www.helpling.fr/">
+        <link rel="alternate" hreflang="nl" href="https://www.helpling.nl/">
+        <link rel="alternate" hreflang="it" href="https://www.helpling.it/">
+        <link rel="alternate" hreflang="en-au" href="http://dev.giupviecsenhong.net/index.html">
+        <link rel="alternate" hreflang="en-sg" href="https://www.helpling.com.sg/">
+        <link rel="alternate" hreflang="en-ae" href="https://www.helpling.ae/">
+        <link rel="alternate" hreflang="en-gb" href="https://www.helpling.co.uk/">
+        <link rel="alternate" hreflang="en-ie" href="https://www.helpling.ie/">
+        <link rel="alternate" hreflang="x-default" href="https://www.helpling.com/">
+        <link href="/share/userweb/mainstyle.css" rel="stylesheet" type="text/css">
+        <link href="/share/userweb/mainstyle1.css" rel="stylesheet" type="text/css">
+        <link rel="canonical" href="http://dev.giupviecsenhong.net/index.html">
+        <link rel="stylesheet" media="screen" href="/share/userweb/mainstyle2.css">
+        <link rel="stylesheet" media="screen" href="/share/userweb/mainstyle3.css">
+        <meta name="apple-itunes-app" content="app-id=1177350953 affiliate-data=ct=smartbanner&amp;pt=97570803">
+        <script src="/share/userweb/parsley.min.js.download"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/share/userweb/foundation.min-34eda1607aa5b365b4f85355a10a43ac1a223f786d683dd06b9a0e91e0affbd2.js.download"></script><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style>
+        <script src="/share/userweb/responsive-nav-615ab27af88a7e9a334e7560fc7e20ef01ee489a1d810c10673783fd8589f7ad.js.download"></script>
+        <link rel="stylesheet" media="screen" href="/share/userweb/index-d3b554486449115e630a59d7bc8e67b61112d872312493ab999594173a93a82c.css">
+        <script src="/share/userweb/marketing-7d8b4bda0e70c870a22638eaff64085c40f96845ff5e7c1b686e5ab5ace3e772.js.download"></script>
+    </head>
+
+    <body class="index-index splash splash-video full-width" style="" cz-shortcut-listen="true">
+        <header class="header-main header-main--light" style="height: 100px">
+            <nav class="site-nav reversed">
+                <div class="container">
+                    <style>
+                        .site-logo:hover{text-decoration:none !important;}
+                    </style>
+                    <a href="/" class="site-logo">
+                        <p color="white" style="color:white;font-family:Satisfy;font-size:30px;font-weight:bold;margin-top: -5px">Sen Hồng</p>
+                    </a>
+                    <a href="/" class="nav-toggle nav-toggle--light" aria-hidden="true">Menu</a>
+                    <nav class="nav nav--main nav-collapse nav-collapse nav-collapse-0 closed" style="transition: max-height 284ms; position: relative;" aria-hidden="false">
+                        <ul>
+
+                            <li><a class="nav__link" href="/" style="font-family: Roboto">Khuyến mại</a></li>
+                            <li><a class="nav__link" href="/" style="font-family: Roboto">Bảng giá</a></li>
+                            <li><span class="link_to_another_page"><a class="nav__link" href="/" style="font-family: Roboto">Trợ giúp</a></span></li>
+
+<!--                            <li><a class="nav__link sign-in" href="http://dev.giupviecsenhong.net/#" style="font-family: Roboto">Đăng nhập</a></li>-->
+
+                            <li><span class="link_to_another_page"><a class="nav__link nav__link--prominent" href="http://dev.giupviecsenhong.net/apply.html" style="font-family: Roboto">Đăng kí trở thành giúp việc</a></span></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+
+        <section id="main-teaser" class="teaser" style="height: 100px !important; background: no-repeat top;
+                 background-image: url(/share/img/banner.png);
+                 background-size: cover;">
+
+            <div class="hv-video-container" style="min-height: 540px;
+                 height: 100px;
+                 margin: 0 0 100px;
+                 text-align: center;">
+            </div>
+        </section>
+        
+        <section style="margin-bottom: 50px;">
+               <div class="main-content" style="padding-top: 50px">
+                <div class="content">
+                    <div class="signup inline-submit">
+                        <form class="new_bid" id="new_bid" action="http://dev.giupviecsenhong.net/" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+                            <style>
+                                .padding-0{
+                                    padding:0 !important;
+                                }
+
+                                .xservices select,
+                                .xservices input{
+                                    width: 100% !important;
+                                    padding: 5px 5px !important;
+                                    height: 45px !important;
+                                    border-radius: 0 !important;
+                                    font-size: 20px !important;
+                                    color:black;
+                                }
+
+                                .xservices label{
+                                    color:black;
+                                }
+
+                                .xservices .signup__button{
+                                    line-height:38px !important;
+                                    color:black;
+                                }
+                            </style>
+
+                            <script>
+                                $(document).ready(function () {
+                                    $('#datetimepicker').datetimepicker({
+                                        format: 'd-m-Y H:i',
+                                        minDate: getFormattedDate(new Date())
+                                    });
+
+                                    function getFormattedDate(date) {
+                                        var day = date.getDate();
+                                        var month = date.getMonth() + 1;
+                                        var year = date.getFullYear().toString().slice(2);
+                                        return day + '-' + month + '-' + year;
+                                    }
+                                });
+                            </script>
+                            <div id="alertSuccess" class="alert success" style="display: none">
+                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';">&times;</span>  
+                                <strong>Thành công!</strong> Đã đặt lịch thành công, trung tâm sẽ liên lạc với bạn!
+                            </div>
+                            <div class="alert" id="alertErrorMsg" style="display: none">
+                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';" >&times;</span>  
+                                <strong>Lỗi!</strong> <label id="lbErrorMsg"></label>
+                            </div>
+
+                            <div class="row" style="margin-bottom: 30px">
+                                <div class="col-md-12" style="text-align:left">
+                                    <input type="hidden" id="latitude" name="latitude" value=""/>
+                                    <input type="hidden" id="longitude" name="longitude" value=""/>
+                                    <input id="pac-input" class="form-control" style="text-align: left; height: 31px; z-index: 1000; position: absolute; border-radius:3px; font-size: 15px;padding:5px; margin-top:10px" type="text" placeholder="Chọn địa chỉ">
+                                    <div id="map" class="enableScroll" style="height: 300px; width: 100%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="row col-md-8 xservices">
+                                <div class="col-md-2 padding-0">
+                                    <input id="inputMobile" class="postcode tool-tipped postcode-validations" required="required" placeholder="Số điện thoại" type="text" data-original-title="" title="">
+                                </div>
+                                <div class="col-md-3 padding-0">
+                                    <input id="inputOwner" class="postcode tool-tipped postcode-validations" required="required" placeholder="Tên chủ nhà" type="text" data-original-title="" title="">
+                                </div>
+                                <div class="col-md-3 padding-0">
+                                    <input id="inputHouseNumber" class="postcode tool-tipped postcode-validations" required="required" placeholder="Số nhà, ngách" type="text" data-original-title="" title="">
+                                </div>
+                                <div class="col-md-2 padding-0">
+                                    <select id="inputServicePackage">
+                                        <option value="" disabled selected>Gói dịch vụ</option>
+                                        <option  value ="120" class="option">2h</option>
+                                        <option  value ="180" class="option">3h</option>
+                                        <option  value ="210" class="option">3.5h</option>
+                                        <option  value ="240" class="option">4h</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 padding-0">
+                                    <input id="datetimepicker" type="text" placeholder="Chọn ngày">
+                                </div>
+                            </div>
+                            <h2 style="float: left; padding-left: 15px; padding-top: 10px; margin-bottom: 15px;">Kỹ năng cần có</h2>
+                            <div class="row col-md-8">
+                                <div class="col-md-4" style="text-align: left;">
+                                    <label class="control control--checkbox">Nấu ăn
+                                        <input id="cbCook" type="checkbox"/>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="col-md-4" style="text-align: left;">
+                                    <label class="control control--checkbox">Chăm bé
+                                        <input id="cbKidCare" type="checkbox"/>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row col-md-8">
+                                <div class="col-md-4" style="text-align: left;">
+                                    <label class="control control--checkbox">Dọn nhà
+                                        <input id="cbCleanHouse" type="checkbox"/>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="col-md-4" style="text-align: left;">
+                                    <label class="control control--checkbox">Chăm sóc người già
+                                        <input id="cbOldCare" type="checkbox"/>
+                                        <div class="control__indicator"></div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row col-md-8" style="text-align: left">
+                                <div class="col-md-9">
+                                    <textarea id="txtareNote" rows="4" style="color: black; padding: 10px; width: 650px;" placeholder="Lời nhắn"></textarea>
+                                </div>
+                                <div class="col-md-3 padding-0" style="margin-top: 65px;">
+                                    <input id="btnFindMad" style="background-color: #47a77f; float: right; border-radius: 0 0px 0px 0; line-height: 25px" type="button" name="commit" value="Đặt lịch" class="btn-primary signup__button" data-checkpostcode="true">
+                                </div>
+                            </div>        
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <style type="text/css">
+            .hotline > div {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                padding: 5px 10px 3px 32px;
+                z-index: 88;
+                background-color: #df2f28;
+                text-transform: uppercase;
+                color: #000;
+                font-weight: bold;
+                background-image: url(/share/img/ic-phone.png);
+                border-radius: 3px 3px 0 0;
+                background-repeat: no-repeat;
+                background-position: 10px 6px;
+                display: block;
+            }
+            .hotline span, .hotline a {
+                font-family: Arial;
+                font-size: 22px;
+                color: #fff;
+                padding-left: 8px;
+                text-decoration: none;
+                line-height: 25px;
+                /* text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff; */
+            }
+        </style>
+        <div class="hotline">
+            <div><a href="tel:01644752126">01644752126</a></div>
+        </div>
+
+<div id="footer-wrapper">
+<div class="row" id="footer">
+<div class="sect-left ready-widget section" id="footer-sec1" name="Widget 1"><div class="widget HTML" data-version="1" id="HTML16">
+<h2 class="title">Trung tâm Sen Hồng</h2>
+<div class="widget-content">
+<img src="http://3.bp.blogspot.com/-ZPDgtT2hBvw/WQiB9Z_ftqI/AAAAAAAADdc/_0wnKV7mHIw8kafAUDti4GKp6nIsFiiWwCK4B/s1600/logo_banner.png">
+<br/>
+<div class="footer__stores">
+                            <div class="footer__stores--ios">
+                                <a target="_blank" rel="noreferrer noopener" href="https://itunes.apple.com/us/app/gi%C3%BAp-vi%E1%BB%87c-sen-h%E1%BB%93ng/id1272486479?mt=8">
+                                    <img src="/share/userweb/badge-ios-au-25178aeef6eb6b83b96f5f2d004eda3bffbb37122de64afbaef7107b384a4132.svg">
+                                </a>
+                            </div>
+                            <div class="footer__stores--android">
+                                <a target="_blank" rel="noreferrer noopener" href="https://play.google.com/store/apps/details?id=com.senhongBETA">
+                                    <img src="/share/userweb/badge-google-au-bc5a28d198f7278d04f50eb9b60ff0658c053df9289ab557361f1f21bc427ab0.svg">
+                                </a>
+                            </div>
+</div>
+<br/>
+Chuyên cung cấp dịch vụ giới thiệu việc làm cho người giúp việc tại Hà Nội.
+</div>
+</div></div>
+<div class="sect-left ready-widget section" id="footer-sec2" name="Widget 2"><div class="widget HTML" data-version="1" id="HTML17">
+<h2 class="title">Liên hệ</h2>
+<div class="widget-content">
+<div>
+<p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<span>P.201 số 11 ngõ 20 đường Mỹ Đình <br> - Nam Từ Liêm - Hà Nội</span> </p>
+</div>
+<div>
+<p><i class="fa fa-facebook"></i>&nbsp;
+<a href="https://wwww.facebook.com/giupviecsenhong" target="_blank">wwww.facebook.com/giupviecsenhong</a></p>
+</div>
+<div>
+<p><i class="fa fa-phone"></i>&nbsp;
+0904.658.026 - 0961.688.025</p>
+</div>
+<div>
+<p><i class="fa fa-envelope"></i>&nbsp;
+<a href="mailto:support@company.com">giupviecsenhong@gmail.com</a></p>
+</div>
+</div>
+</div></div>
+<div class="sect-left ready-widget section" id="footer-sec3" name="Widget 3"><div class="widget HTML" data-version="1" id="HTML18">
+<h2 class="title">Bản đồ</h2>
+<div class="widget-content">
+<div id="map" style="width: 300px; height: 200px; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="z-index: 1; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: -170px; top: -217px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -170px; top: 39px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 86px; top: -217px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 86px; top: 39px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -170px; top: -217px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -170px; top: 39px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 86px; top: -217px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 86px; top: 39px;"><canvas draggable="false" height="256" width="256" style="user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 300px; height: 200px;"><img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i13317802&amp;2i7385561&amp;2e1&amp;3u16&amp;4m2&amp;1u300&amp;2u200&amp;5m5&amp;1e0&amp;5svi-VN&amp;6sus&amp;10b1&amp;12b1&amp;token=76901" style="width: 300px; height: 200px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: -170px; top: -217px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i16!2i52022!3i28849!4i256!2m3!1e0!2sm!3i394091355!3m9!2svi-VN!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=5921" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -170px; top: 39px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i16!2i52022!3i28850!4i256!2m3!1e0!2sm!3i394091247!3m9!2svi-VN!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=7260" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 86px; top: -217px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i16!2i52023!3i28849!4i256!2m3!1e0!2sm!3i394091355!3m9!2svi-VN!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=97271" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 86px; top: 39px; transition: opacity 200ms ease-out;"><img draggable="false" alt="" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i16!2i52023!3i28850!4i256!2m3!1e0!2sm!3i394091355!3m9!2svi-VN!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=56808" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div></div><div style="z-index: 4; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=21.032006,105.772256&amp;z=16&amp;t=m&amp;hl=vi-VN&amp;gl=US&amp;mapclient=apiv3" title="Nhấp để xem khu vực này trên Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 246px; height: 148px; position: absolute; left: 5px; top: 10px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dữ liệu Bản đồ</div><div style="font-size: 13px;">Dữ liệu bản đồ ©2017 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 215px; bottom: 0px; width: 77px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer;">Dữ liệu Bản đồ</a><span style="display: none;">Dữ liệu bản đồ ©2017 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Dữ liệu bản đồ ©2017 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 115px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/vi-VN_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Điều khoản sử dụng</a></div></div><div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Báo cáo lỗi trong bản đồ đường hoặc hình ảnh đến Google" href="https://www.google.com/maps/@21.0320057,105.7722561,16z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Báo cáo một lỗi bản đồ</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Phóng to" aria-label="Phóng to" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Thu nhỏ" aria-label="Thu nhỏ" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Kiểm soát người hình mắc áo trong chế độ xem phố" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Người hình mắc áo ở đầu Bản đồ" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div aria-label="Kiểm soát người hình mắc áo trong chế độ xem phố" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Xoay bản đồ 90 độ" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Hiển thị bản đồ phố" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 35px; font-weight: 500;">Bản đồ</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Hiển thị bản đồ phố với địa hình" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Địa hình</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Hiển thị hình ảnh qua vệ tinh" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-left: 0px; min-width: 34px;">Vệ tinh</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Hiển thị hình ảnh có tên phố" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Nhãn</label></div></div></div></div></div></div></div>
+                <script style="display: none !important;">!function(e,t,r,n,c,a,l){function i(t,r){return r=e.createElement('div'),r.innerHTML='<a href="'+t.replace(/"/g,'&quot;')+'"></a>',r.childNodes[0].getAttribute('href')}function o(e,t,r,n){for(r='',n='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^n);return i(r)}try{for(c=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',n=0;n<c.length;n++)try{(t=(a=c[n]).href.indexOf(l))>-1&&(a.href='mailto:'+o(a.href,t+l.length))}catch(e){}for(c=e.querySelectorAll('.__cf_email__'),n=0;n<c.length;n++)try{(a=c[n]).parentNode.replaceChild(e.createTextNode(o(a.getAttribute('data-cfemail'),0)),a)}catch(e){}}catch(e){}}(document);</script><script>
+                  
+                </script>
+                </script>
+</div>
+</div></div>
+</div>
+<div class="clear"></div>
+<div class="footer-wrapper">
+<div class="footer-copy row">
+<div class="copyright">
+Created By <a href="http://www.soratemplates.com/" id="mycontent" rel="dofollow" title="Free Blogger Templates" style="display: inline-block!important; font-size: inherit!important; color: #fff!important; visibility: visible!important; opacity: 1!important;">Sora Templates</a> | Distributed By <a href="https://gooyaabitemplates.com/" rel="dofollow" target="_blank">Gooyaabi Templates</a>
+</div>
+<div class="native-opt">
+<li><a class="back-top" href="#top" title="Back to Top"><i class="fa fa-caret-up"></i></a></li>
+</div>
+</div>
+</div>
+</div>
+
+        <script type="text/javascript">
+            function loadScript(src, callback) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                if (callback)
+                    script.onload = callback;
+                document.getElementsByTagName("head")[0].appendChild(script);
+                script.src = src;
+            }
+            $(document).ready(function () {
+                loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyD18jCVXG3nu0ki_CCxmXYBszepbOZSYok&libraries=places&callback=initMap');
+            });
+        </script>
+
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Helpling",
+            "alternateName": "Helpling Australia",
+            "url": "https://www.helpling.com.au/"
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Helpling",
+            "url": "https://www.helpling.com.au/",
+            "logo": "https://www.helpling.com.au/assets/logo/logo_helpling-3163cbf1125656f20171586b9f1803588f80b5861bab7e89df8f896e6f122c57.png",
+            "sameAs": [ "https://www.facebook.com/helpling.com.au" ]
+            }
+        </script>
+
+
+
+
+        <script src="/share/userweb/landing_page-3ca5eb62999bff6a9fe97e35d59efafb6b23a48cf7b5c87e8124efeab32cb26a.js.download"></script>
+        <script src="/share/userweb/accordion-246bc2bd163775d276ef43fc5dc68f30140986245e9ed37f28922085b5bd491c.js.download"></script>
+
+        <script>
+            var nav = responsiveNav('.nav-collapse', {// Selector
+                animate: true, // Boolean: Use CSS3 transitions, true or false
+                transition: 284, // Integer: Speed of the transition, in milliseconds
+                label: 'Menu', // String: Label for the navigation toggle
+                insert: 'before', // String: Insert the toggle before or after the navigation
+                customToggle: '.nav-toggle'
+            });
+        </script>
+        <div id="no-support" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <h4>We're not in <span id="modal-postcode__header">[postcode]</span> yet...</h4>
+
+                        <p>But give us your email address and we will email you when we get there!</p>
+                        <form class="new_lead" id="new_lead" action="https://www.helpling.com.au/leads" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="LSXwe4HWa1+ukou5sK1bJrOJqjoE5M6hb7u2cED/H/092tCwdV09zq+YqldFsh6o7mdAQbRYWmqL5HNRC9tu+w==">
+
+                            <input class="new-lead__email" placeholder="Please fill in your email" required="required" type="text" name="lead[email]" id="lead_email">
+                            <input placeholder="Type in your postcode" required="required" type="text" name="lead[postcode]" id="lead_postcode">
+                            <input type="submit" name="commit" value="Keep me updated" class="btn-primary btn-lg new-lead__submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="regisModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div  class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Đăng ký để đặt lịch</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert" id="alertErrorMsgModal" style="display: none">
+                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';" >&times;</span>  
+                                <strong>Lỗi!</strong> <label id="lbErrorMsgModal"></label>
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <label class="col-md-4" for="regisMobile">Số điện thoại</label>
+                            <input id="regisMobile" class="postcode tool-tipped postcode-validations" required="required" placeholder="" type="text" data-original-title="" title="">
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <label class="col-md-4" for="regisPassword">Mật khẩu</label>
+                            <input id="regisPassword" class="postcode tool-tipped postcode-validations" required="required" placeholder="" type="password" data-original-title="" title="">
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <label class="col-md-4" for="regisRePassword">Nhập lại mật khẩu</label>
+                            <input id="regisRePassword" class="postcode tool-tipped postcode-validations" required="required" placeholder="" type="password" data-original-title="" title="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" style="background-color: #d9534f; border-color: #d43f3a;" data-dismiss="modal">Hủy</button>
+                        <button type="button" id="btnRegis" class="btn btn-primary">Đồng ý</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="loginModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div  class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Đăng nhập để đặt lịch</h4>
+                    </div>
+                    <div class="modal-body">
+                         <div class="alert" id="alertErrorMsgModalLogin" style="display: none">
+                                <span class="closebtn" onclick="this.parentElement.style.display = 'none';" >&times;</span>  
+                                <strong>Lỗi!</strong> <label id="lbErrorMsgModalLogin"></label>
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <label class="col-md-4" for="loginMobile">Số điện thoại</label>
+                            <input id="loginMobile" class="postcode tool-tipped postcode-validations" required="required" placeholder="" type="text" data-original-title="" title="">
+                        </div>
+                        <div class="row" style="margin-bottom: 10px">
+                            <label class="col-md-4" for="loginPassword">Mật khẩu</label>
+                            <input id="loginPassword" class="postcode tool-tipped postcode-validations" required="required" placeholder="" type="password" data-original-title="" title="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" style="background-color: #d9534f; border-color: #d43f3a;" data-dismiss="modal">Hủy</button>
+                        <button type="button" id="btnLogin" class="btn btn-primary">Đồng ý</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mirrored from www.helpling.com.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Aug 2017 02:56:15 GMT -->
+
+        <div class="xdsoft_datetimepicker xdsoft_noselect xdsoft_">
+            <div class="xdsoft_datepicker active">
+                <div class="xdsoft_monthpicker">
+                    <button type="button" class="xdsoft_prev" style="visibility: visible;">    
+                    </button><button type="button" class="xdsoft_today_button" style="visibility: visible;"></button>
+                    <div class="xdsoft_label xdsoft_month"><span></span><div class="xdsoft_select xdsoft_monthselect xdsoft_scroller_box"><div style="margin-top: 0px;"></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div><i></i></div><div class="xdsoft_label xdsoft_year"><span></span><div class="xdsoft_select xdsoft_yearselect xdsoft_scroller_box"><div style="margin-top: 0px;"></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div><i></i></div><button type="button" class="xdsoft_next" style="visibility: visible;"></button></div><div class="xdsoft_calendar"></div><button type="button" class="xdsoft_save_selected blue-gradient-button" style="display: none;">Save Selected</button></div><div class="xdsoft_timepicker active"><button type="button" class="xdsoft_prev"></button><div class="xdsoft_time_box xdsoft_scroller_box"><div class="xdsoft_time_variant" style="margin-top: 0px;"></div><div class="xdsoft_scrollbar"><div class="xdsoft_scroller" style="display: block; height: 10px; margin-top: 0px;"></div></div></div>
+                <button type="button" class="xdsoft_next">
+
+                </button>
+            </div>
+        </div>
+
+        <script>
+            // something like script
+            $('#btnFindMad').click(function () {
+                var phoneNumber = document.getElementById("inputMobile").value;
+                var owner = document.getElementById("inputOwner").value;
+                var houseNumber = document.getElementById("inputHouseNumber").value;
+                var servicePackage = document.getElementById("inputServicePackage").value;
+                var setDate = document.getElementById("datetimepicker").value;
+                var isCook = document.getElementById('cbCook').checked ? 1 : 0;
+                var isKidCare = document.getElementById('cbKidCare').checked ? 1 : 0;
+                var isCleanHouse = document.getElementById('cbCleanHouse').checked ? 1 : 0;
+                var isOldCare = document.getElementById('cbOldCare').checked ? 1 : 0;
+                var note = document.getElementById('txtareNote').value;
+                var address = document.getElementById('pac-input').value;
+                var longitude = document.getElementById('longitude').value;
+                var latitude = document.getElementById('latitude').value;
+
+                document.getElementById("alertSuccess").style.display = "none";
+                document.getElementById("alertErrorMsg").style.display = "none";
+                
+                if(!address){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa chọn địa chỉ!';
+                    return;
+                }
+                
+                if(!phoneNumber){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa nhập số điện thoại!';
+                    return;
+                }else{
+                    if(phoneNumber.length > 11 || phoneNumber.length < 10){
+                        document.getElementById("alertErrorMsg").style.display = "block";
+                        document.getElementById('lbErrorMsg').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                    var isnum = /^\d+$/.test(phoneNumber);
+                    if(isnum == false){
+                        document.getElementById("alertErrorMsg").style.display = "block";
+                         document.getElementById('lbErrorMsg').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                }
+                
+                if(!owner){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa nhập tên chủ nhà!';
+                    return;
+                }
+                
+                if(!houseNumber){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa nhập số nhà!';
+                    return;
+                }
+                
+                if(!servicePackage){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa chọn gói dịch vụ!';
+                    return;
+                }
+                
+                if(!setDate){
+                    document.getElementById("alertErrorMsg").style.display = "block";
+                    document.getElementById('lbErrorMsg').innerHTML = 'Chưa chọn ngày làm việc!';
+                    return;
+                }
+        
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/check-phone',
+                    data: {'phoneNumber': phoneNumber},
+                    cache: false, //fix loop IE
+                    success: function (data, textStatus, jqXHR) {
+                        if (data.registered === true) {
+                           document.getElementById("loginMobile").value = phoneNumber;
+                            $("#loginModal").modal();
+                        } else {
+                            document.getElementById("regisMobile").value = phoneNumber;
+                            $("#regisModal").modal();
+                        }
+                    }
+                });
+            });
+
+            $('#btnRegis').click(function () {
+                var phoneNumber = document.getElementById("regisMobile").value;
+                var owner = document.getElementById("inputOwner").value;
+                var password = document.getElementById("regisPassword").value;
+                var repassword = document.getElementById("regisRePassword").value;
+                var address = document.getElementById('pac-input').value;
+                document.getElementById("alertErrorMsgModal").style.display = "none";
+                if(!phoneNumber){
+                    document.getElementById("alertErrorMsgModal").style.display = "block";
+                    document.getElementById('lbErrorMsgModal').innerHTML = 'Chưa nhập số điện thoại!';
+                    return;
+                }else{
+                    if(phoneNumber.length > 11 || phoneNumber.length < 10){
+                        document.getElementById("alertErrorMsgModal").style.display = "block";
+                        document.getElementById('lbErrorMsgModal').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                    var isnum = /^\d+$/.test(phoneNumber);
+                    if(isnum == false){
+                        document.getElementById("alertErrorMsgModal").style.display = "block";
+                         document.getElementById('lbErrorMsgModal').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                }
+                
+                if(!password){
+                    document.getElementById("alertErrorMsgModal").style.display = "block";
+                    document.getElementById('lbErrorMsgModal').innerHTML = 'Chưa nhập mật khẩu!';
+                    return;
+                }else{
+                    if(password.length < 6){
+                         document.getElementById("alertErrorMsgModal").style.display = "block";
+                         document.getElementById('lbErrorMsgModal').innerHTML = 'Mật khẩu cần lớn hơn 6 ký tự!';
+                         return;
+                    }
+                }
+                if(!repassword){
+                    document.getElementById("alertErrorMsgModal").style.display = "block";
+                    document.getElementById('lbErrorMsgModal').innerHTML = 'Chưa nhập lại mật khẩu!';
+                    return;
+                }else{
+                    if(password !== repassword){
+                         document.getElementById("alertErrorMsgModal").style.display = "block";
+                         document.getElementById('lbErrorMsgModal').innerHTML = 'Mật khẩu nhập lại không khớp!';
+                    return;
+                    }
+                }
+                
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/user/adduser',
+                    data: {
+                        'username': owner,
+                        'mobile': phoneNumber,
+                        'password': password,
+                        'usertype': 3,
+                        'address': address
+                    },
+                    cache: false, //fix loop IE
+                    success: function (data, textStatus, jqXHR) {
+                        if(data.response_message === 'Thêm mới thành công'){
+                            $('#regisModal').modal('hide');
+                            searchOneTimeMad();
+                        }else{
+                            document.getElementById("alertErrorMsg").style.display = "block";
+                            document.getElementById('lbErrorMsg').innerHTML = 'Đăng ký không thành công!';
+                            $('#regisModal').modal('hide');
+                        }
+                    }
+                });
+
+            });
+            
+            $('#btnLogin').click(function () {
+                var phoneNumber = document.getElementById("loginMobile").value;
+                var password = document.getElementById("loginPassword").value;
+                document.getElementById("alertErrorMsgModalLogin").style.display = "none";
+                if(!phoneNumber){
+                    document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                    document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Chưa nhập số điện thoại!';
+                    return;
+                }else{
+                    if(phoneNumber.length > 11 || phoneNumber.length < 10){
+                        document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                        document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                    var isnum = /^\d+$/.test(phoneNumber);
+                    if(isnum == false){
+                        document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                         document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Số điện thoại không hợp lệ!';
+                        return;
+                    }
+                }
+                
+                if(!password){
+                    document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                    document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Chưa nhập mật khẩu!';
+                    return;
+                }else{
+                    if(password.length < 6){
+                         document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                         document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Mật khẩu cần lớn hơn 6 ký tự!';
+                         return;
+                    }
+                }
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/validate-login',
+                    data: {
+                        'phoneNumber': phoneNumber,
+                        'password': password
+                    },
+                    cache: false, //fix loop IE
+                    success: function (data, textStatus, jqXHR) {
+                        if(data.login == true){
+                            $('#loginModal').modal('hide');
+                            searchOneTimeMad();
+                        }else{
+                            document.getElementById("alertErrorMsgModalLogin").style.display = "block";
+                            document.getElementById('lbErrorMsgModalLogin').innerHTML = 'Thông tin đăng nhập không chính xác!';
+                        }
+                    }
+                });
+
+            });
+
+            searchOneTimeMad = function () {
+                var phoneNumber = document.getElementById("inputMobile").value;
+                var owner = document.getElementById("inputOwner").value;
+                var houseNumber = document.getElementById("inputHouseNumber").value;
+                var servicePackage = document.getElementById("inputServicePackage").value;
+                var setDate = document.getElementById("datetimepicker").value;
+                var isCook = document.getElementById('cbCook').checked ? 1 : 0;
+                var isKidCare = document.getElementById('cbKidCare').checked ? 1 : 0;
+                var isCleanHouse = document.getElementById('cbCleanHouse').checked ? 1 : 0;
+                var isOldCare = document.getElementById('cbOldCare').checked ? 1 : 0;
+                var note = document.getElementById('txtareNote').value;
+                var address = document.getElementById('pac-input').value;
+                var longitude = document.getElementById('longitude').value;
+                var latitude = document.getElementById('latitude').value;
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '/create-order',
+                    data: {
+                        'phoneNumber': phoneNumber,
+                        'address': address,
+                        'latitude': latitude,
+                        'longitude': longitude,
+                        'cleaning': isCleanHouse,
+                        'cooking': isCook,
+                        'babyCare': isKidCare,
+                        'oldCare': isOldCare,
+                        'content': note,
+                        'startDate': setDate,
+                        'startLength': servicePackage,
+                        'contactName': owner,
+                        'contactMobile': phoneNumber,
+                        'isPeriodical': 0
+                    },
+                    cache: false, //fix loop IE
+                    success: function (data, textStatus, jqXHR) {
+                        document.getElementById("alertSuccess").style.display = "block";
+                    }
+                });
+            }
+
+//            $("#alertSuccess").fadeTo(5000, 500).slideUp(500, function(){
+//                $("#alertSuccess").slideUp(500);
+//             });
+//            
+        </script>
+
+    </body>
+</html>
